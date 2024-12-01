@@ -1,7 +1,8 @@
 # website-on-pi
-run "git clone sidharth-458/webiste-on-pi.git"
-run "for pkg in docker.io docker-doc docker-compose podman-docker containerd runc; do sudo apt-get remove $pkg; done"
-run the following:
+# Initialize
+    git clone sidharth-458/webiste-on-pi.git
+    for pkg in docker.io docker-doc docker-compose podman-docker containerd runc; do sudo apt-get remove $pkg; done
+    
 # Add Docker's official GPG key:
     sudo apt-get update
     sudo apt-get install ca-certificates curl
@@ -21,4 +22,12 @@ run the following:
 # verify 
     sudo docker run hello-world
 
-run "docker-compose up -d" in directory 
+#Build and run:
+
+    docker-compose up -d
+
+#Check and verify 
+Nginx will be running at 8080 port for the outside world, as it is proxying on behalf of 5005 port where flask is running
+
+with love,
+Sid
